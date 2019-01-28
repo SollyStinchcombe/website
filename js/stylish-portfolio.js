@@ -62,3 +62,21 @@ var onMapClickHandler = function(event) {
 }
 // Enable map zooming with mouse scroll when the user clicks the map
 $('.map').on('click', onMapClickHandler);
+
+# Allow cookies
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
