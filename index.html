@@ -215,23 +215,32 @@ function checkCookie() {
           
     <form action="https://formspree.io/sstinchcombe14@ivybridge.devon.sch" method="POST">
         <h2 class="text-center text-secondary mb-0">Contact me</h2>
-       <td valign="top"">
-        <label for="last_name"> Name *</label>
-       </td>
-       <td valign="top">
-        <input  type="text" name="last_name" maxlength="50" size="30">
-       </td>
-      </tr>
-      <tr>
-       <td valign="top">
-        <input type="Email Adress" name="_replyto">
-       </td>
-       <td valign="top">
-        <input  type="text" name="email" maxlength="80" size="30">
-        <input type="submit" value="Send">                                                         
-       </td>
-        </form>
-
+<div id="form-main">
+  <div id="form-div">
+    <form class="montform" id="reused_form"  >
+      <p class="name">
+      	<input name="name" type="text" class="feedback-input" required placeholder="Name" id="name" />
+      </p>
+      <p class="email">
+        <input name="email" type="email" required  class="feedback-input" id="email" placeholder="Email" />
+      </p>
+      <p class="text">
+        <textarea name="message" class="feedback-input" id="comment" placeholder="Message"></textarea>
+      </p>
+            <div class="submit">
+        <button type="submit" class="button-blue">SUBMIT</button>
+        <div class="ease"></div>
+      </div>
+    </form>
+          <div id="error_message" style="width:100%; height:100%; display:none; ">
+                <h4>Error</h4>
+                Sorry there was an error sending your form.
+          </div>
+          <div id="success_message" style="width:100%; height:100%; display:none; ">
+          <h2>Success! Your Message was Sent Successfully.</h2>
+          </div>
+    </div>
+</div>
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
@@ -270,11 +279,7 @@ function checkCookie() {
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.min.js"></script>
-    <div id="cookieConsent">
-    <div id="closeCookieConsent">x</div>
-    This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK">That's Fine</a>
-   </div>                                       
+    <script src="js/stylish-portfolio.min.js"></script>                                 
 
   </body>
 
