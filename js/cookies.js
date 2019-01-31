@@ -1,8 +1,8 @@
 $(document).ready(function(){   
     setTimeout(function () {
-        $("#cookieConsent").fadeIn(200);
-     }, 1000);
+        $("#cookieConsent").fadeIn(100);
+     }, 100);
     $("#closeCookieConsent, .cookieConsentOK").click(function() {
-        $("#cookieConsent").fadeOut(200);
+        $("#cookieConsent").fadeOut(100);
     }); 
 }); 
